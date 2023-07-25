@@ -1,0 +1,308 @@
+:root {
+  --font-color: #dfdfdf;
+  --purple: #571b6e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:not(#particles-js2) {
+  z-index: 2;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "DM Sans", sans-serif;
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background: linear-gradient(135deg, #464646, 30%, #0a0a0a);
+  z-index: 1;
+}
+#particles-js2 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+#navbar {
+  width: 100%;
+  height: 4rem;
+  background: hsl(0 0% 100% / 0.1);
+  backdrop-filter: blur(1rem);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 9999;
+  color: var(--font-color);
+}
+
+#navbar ul li {
+  list-style-type: none;
+  margin-inline: 2.5rem;
+  display: inline;
+
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+#navbar ul li a {
+  padding-block: 7px;
+}
+
+#navbar ul li:hover {
+  color: #aaaaaa;
+}
+
+#navbar ul li a {
+  position: relative;
+}
+
+#navbar ul li a,
+#navbar ul li a:after,
+#navbar ul li a:before {
+  transition: all 0.5s;
+}
+
+#navbar ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaaaaa;
+  height: 1px;
+}
+#navbar ul li a:hover:after {
+  width: 100%;
+}
+
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 0;
+  background: linear-gradient(135deg, #464646, 30%, #0a0a0a);
+}
+
+#welcome-section h1 {
+  margin-top: 2rem;
+  margin-right: 2rem;
+  color: var(--font-color);
+  font-size: 80px;
+  animation: 1s ease-out 0s 1 slideInLeft;
+}
+
+#welcome-section p {
+  font-size: 20px;
+  font-style: italic;
+  color: var(--font-color);
+  margin-right: 2rem;
+  animation: 0.8s ease-out 0s 1 slideInLeft;
+}
+.divider {
+  height: 0.1rem;
+  background-color: black;
+  position: relative;
+  width: 100%;
+}
+
+#about-section {
+  color: var(--font-color);
+  text-align: center;
+  background: linear-gradient(45deg, #d898f1, #340247);
+  padding: 6rem 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+#image-parent {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2.5rem;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}
+#image-one,
+#image-two,
+#image-three {
+  transition: .5s ease;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5%;
+}
+
+#image-one-container {
+  height: 30rem;
+}
+#image-two-container,
+#image-three-container {
+  height: 20rem;
+}
+.image-container a {
+  position: absolute;
+  
+}
+.image-text {
+  transition: .5s ease;
+  opacity: 0;
+  background-color: var(--purple);
+  padding: 1rem;
+  color: var(--font-color);
+  font-weight: 500;
+}
+.image-container {
+  transition: .5s ease;
+  backface-visibility: hidden;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.image-container:hover .image {
+  opacity: 0.3;
+}
+.image-container:hover .image-text {
+  opacity: 1;
+}
+
+ 
+#about-section h2 {
+  padding-bottom: 3rem;
+  font-size: 3.5rem;
+}
+
+#about-text-parent {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about-text-parent p {
+  font-size: 1.5rem;
+}
+
+#projects-section {
+  width: 100%;
+  text-align: center;
+  color: var(--font-color);
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(270deg, #464646, 30%, #0a0a0a);
+}
+#projects-section h3 {
+  font-size: 3rem;
+}
+
+#contact-section {
+  width: 100%;
+  height: 60vh;
+  background: linear-gradient(45deg, #464646, 30%, #0a0a0a);
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-quote {
+  font-style: italic;
+  padding-bottom: 2rem;
+  justify-self: flex-end;
+  text-align: center;
+}
+
+#contact-section h4 {
+  padding: 1.5rem;
+  font-size: 4rem;
+}
+
+.contact-details {
+  padding: 8px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: 8px;
+  justify-self: center;
+  padding-bottom: 2rem;
+}
+
+.contact-hover {
+  background-image: linear-gradient(#71328a 0 0);
+  background-size: 200% 0.2em;
+  background-position: 200% 100%;
+  background-repeat: no-repeat;
+  transition: background-size .3s, background-position .3s .3s;
+}
+
+.contact-hover:hover {
+  transition: background-size .3s .3s, background-position .3s;
+  background-size: 200% 100%;
+  background-position: 100% 100%;
+}
+
+.image-container {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .contact-links {
+    flex-direction: column;
+    max-width: 120px;
+    min-width: 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1500px) {
+  #image-parent {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
