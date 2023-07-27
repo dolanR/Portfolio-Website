@@ -104,6 +104,7 @@ a {
 #navbar ul li a,
 #navbar ul li a:after,
 #navbar ul li a:before {
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -324,7 +325,7 @@ a {
     font-size: 12px;
   }
   #welcome-section {
-    height: 100lvh;
+    height: 100dvh;
   }
   .contact-links {
     font-size: 150%;
