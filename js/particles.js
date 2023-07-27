@@ -132,3 +132,4 @@ particlesJS("particles-js", {
       button.className="fas fa-bars fa-3x";
     }
   }
+
