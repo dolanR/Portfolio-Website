@@ -120,3 +120,15 @@ particlesJS("particles-js", {
     requestAnimationFrame(monkey);
   };
   requestAnimationFrame(monkey);
+
+  function toggleNav() {
+    var navbar = document.querySelector('#navbar');
+    navbar.style.right = (navbar.style.right === '-35%') ? '-800px' : '-35%';
+    var button = document.querySelector('#button-icon')
+    if (navbar.style.right == '-35%') {
+      button.className="fas fa-times fa-3x";
+    }
+    else {
+      button.className="fas fa-bars fa-3x";
+    }
+  }

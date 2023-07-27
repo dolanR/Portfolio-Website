@@ -16,6 +16,7 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "DM Sans", sans-serif;
+  font-size: 16px;
 }
 #particles-js {
   position: absolute;
@@ -65,8 +66,13 @@ a {
   flex-direction: row;
   z-index: 9999;
   color: var(--font-color);
+  left: 0px;
+  right: unset;
 }
-
+#mobile-nav-button {
+  position: absolute;
+  display: none;
+}
 #navbar ul li {
   list-style-type: none;
   margin-inline: 2.5rem;
@@ -117,15 +123,14 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 8px 0;
   background: linear-gradient(135deg, #464646, 30%, #0a0a0a);
 }
 
 #welcome-section h1 {
-  margin-top: 2rem;
-  margin-right: 2rem;
   color: var(--font-color);
-  font-size: 80px;
+  font-size: 5rem;
   animation: 1s ease-out 0s 1 slideInLeft;
 }
 
@@ -133,7 +138,6 @@ a {
   font-size: 20px;
   font-style: italic;
   color: var(--font-color);
-  margin-right: 2rem;
   animation: 0.8s ease-out 0s 1 slideInLeft;
 }
 .divider {
@@ -213,6 +217,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: left;
 }
 
 #about-text-parent p {
@@ -236,13 +241,13 @@ a {
 
 #contact-section {
   width: 100%;
-  height: 60vh;
   background: linear-gradient(45deg, #464646, 30%, #0a0a0a);
   color: var(--font-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 #contact-quote {
@@ -302,7 +307,72 @@ a {
 
 @media (max-width: 1500px) {
   #image-parent {
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 12px;
+  }
+  .contact-links {
+    font-size: 150%;
+  }
+  #contact-quote {
+    font-size: 140%;
+  }
+  #projects-section p {
+    font-size: 175%;
+  }
+  #about-section {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
+    padding: 1rem 1rem;
+  }
+  #image-parent {
+    width: 100%;
+  }
+  #about-text-parent {
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  #about-text-parent h2 {
+    padding-bottom: 0;
+    text-align: center;
+  }
+  #navbar {
+    position: fixed;
+    height: 110vh;
+    z-index: 1000;
+    transition: right 0.3s ease;
+    right: -800px;
+    left: unset;
+  }
+  #navbar ul {
+    position: fixed;
+    top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+  }
+  #navbar ul li {
+    padding-bottom: 5rem;
+    font-size: 280%;
+  }
+  #mobile-nav-button {
+    position: fixed;
+    width: 1rem;
+    aspect-ratio: 1;
+    z-index: 9999;
+    top: 5%;
+    right: 15%;
+    background: transparent;
+    border: none;
+    color: var(--font-color);
+    display: block;
   }
 }
