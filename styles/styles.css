@@ -322,11 +322,9 @@ a {
 @media (max-width: 800px) {
   html {
     font-size: 12px;
-    height: -webkit-fill-available;
   }
-  body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
+  #welcome-section {
+    height: 100lvh;
   }
   .contact-links {
     font-size: 150%;
@@ -386,5 +384,16 @@ a {
     border: none;
     color: var(--font-color);
     display: block;
+  }
+  #navbar ul li:active {
+    color: #aaaaaa
+  }
+  #navbar ul li a:active:after {
+    width: 100%;
+  }
+  .contact-hover:active {
+    transition: background-size .3s .3s, background-position .3s;
+    background-size: 200% 100%;
+    background-position: 100% 100%;
   }
 }
