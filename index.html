@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body class="scroller">
+  <body class="scroller" onscroll="clickOffNav()">
     <!-- NAVBAR SECTION -->
     <button id="mobile-nav-button" aria-controls="navbar" aria-expanded="false" onclick="toggleNav()">
       <span class="sr-only">Menu</span>
@@ -17,15 +17,15 @@
     </button>
     <nav id="navbar">
       <ul id="primary-nav">
-        <li><a href="#">Welcome</a></li>
-        <li><a href="#about-section">About</a></li>
-        <li><a href="#projects-section">Work</a></li>
-        <li><a href="#contact-section">Contact</a></li>
+        <li><a href="#" onclick="toggleNav()">Welcome</a></li>
+        <li><a href="#about-section" onclick="toggleNav()">About</a></li>
+        <li><a href="#projects-section" onclick="toggleNav()">Work</a></li>
+        <li><a href="#contact-section" onclick="toggleNav()">Contact</a></li>
       </ul>
     </nav>
     <!-- NAVBAR SECTION -->
-    <div id="particles-js"></div>
-    <main>
+    <div id="particles-js" onclick="clickOffNav()" ></div>
+    <main onclick="clickOffNav()" >
     <!-- WELCOME SECTION -->
       <div id="particles-js2"></div>
       <section id="welcome-section">

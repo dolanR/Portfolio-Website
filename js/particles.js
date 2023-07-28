@@ -120,11 +120,15 @@ particlesJS("particles-js", {
     requestAnimationFrame(monkey);
   };
   requestAnimationFrame(monkey);
-
+  
+  
+  var navbar = document.querySelector('#navbar');
+  var button = document.querySelector('#button-icon')
+  var buttonClick = document.querySelector('#mobile-nav-button')
   function toggleNav() {
-    var navbar = document.querySelector('#navbar');
+    
     navbar.style.right = (navbar.style.right === '-35%') ? '-800px' : '-35%';
-    var button = document.querySelector('#button-icon')
+    
     if (navbar.style.right == '-35%') {
       button.className="fas fa-times fa-3x";
     }
@@ -132,4 +136,13 @@ particlesJS("particles-js", {
       button.className="fas fa-bars fa-3x";
     }
   }
+
+  function clickOffNav() {
+    if(navbar.style.right === '-35%') {
+      navbar.style.right = '-800px';
+      button.className="fas fa-bars fa-3x";
+    }
+  }
+
+  
 
