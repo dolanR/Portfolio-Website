@@ -128,7 +128,7 @@ a {
 
 #welcome-section {
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -389,5 +389,8 @@ a {
     border: none;
     color: var(--font-color);
     display: block;
+  }
+  #welcome-section {
+    height: 100lvh;
   }
 }
