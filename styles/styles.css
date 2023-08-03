@@ -228,6 +228,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-right: 3rem;
 }
 
 #about-text-parent p {
@@ -349,6 +350,7 @@ a {
   #about-text-parent {
     width: 100%;
     padding-bottom: 1rem;
+    padding-left: 3rem;
   }
   #about-text-parent h2 {
     padding-bottom: 0;
