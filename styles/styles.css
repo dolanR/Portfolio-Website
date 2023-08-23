@@ -164,15 +164,17 @@ a {
   background: linear-gradient(45deg, #d898f1, #340247);
   padding: 2rem;
   display: flex;
+  justify-content: center;
+  gap: 3%;
 }
 #image-parent {
   display: flex;
   flex-flow: row wrap;
   gap: 2.5rem;
-  width: 60%;
+  width: 50%;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0rem;
 }
 #image-one,
 #image-two,
@@ -221,10 +223,11 @@ a {
 #about-section h2 {
   padding-bottom: 3rem;
   font-size: 3.5rem;
+  text-align: left;
 }
 
 #about-text-parent {
-  width: 40%;
+  width: 47%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -349,10 +352,12 @@ a {
   }
    #about-text-parent { 
     width: 100%;
+    padding-bottom: 2rem;
   } 
   #about-text-parent h2 {
     padding-bottom: 0;
-    text-align: center;
+    text-align: left;
+    padding-bottom: 2rem;
   }
   #navbar {
     position: fixed;
@@ -390,5 +395,20 @@ a {
     border: none;
     color: var(--font-color);
     display: block;
+  }
+}
+
+@media(max-width: 650px) {
+  #image-three-container {
+    display: none;
+  }
+  #image-one-container {
+    height: 25rem;
+  }
+}
+
+@media(max-width: 615px) {
+  #image-one-container {
+    display: none;
   }
 }
